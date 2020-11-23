@@ -1,0 +1,10 @@
+:root {
+  /* Цвета */
+  --color-grey: #707070;
+  --color-blue: #006896;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Шрифты */
+  --font-main: 'Roboto', sans-serif;
+}
