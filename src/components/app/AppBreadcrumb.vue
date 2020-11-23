@@ -1,7 +1,10 @@
 <template>
   <div class="breadcrumb">
     <router-link
-      v-if="this.$route.meta.breadcrumb !== 'Главная'"
+      v-if="
+        this.$route.meta.breadcrumb !== 'Главная' &&
+        this.$route.meta.breadcrumb !== 'Ошибка 404'
+      "
       class="breadcrumb__btn-back"
       to="/"
       ><arrow-back

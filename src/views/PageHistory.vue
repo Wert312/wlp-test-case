@@ -11,24 +11,16 @@
       :images="imagesHistory"
       @deleteImageFromHistory="deleteImageFromHistory"
     />
-    <image-pagination :paginated-data="imagesHistory" />
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
 import ImageCard from '@/components/image/ImageCard.vue';
-import ImagePagination from '@/components/image/ImagePagination.vue';
 
 export default {
   name: 'PageHistory',
-  components: { ImageCard, ImagePagination },
-  data() {
-    return {
-      pageNumber: 0,
-    }
-  },
-
+  components: { ImageCard},
   computed: {
     ...mapState({
       imagesHistory: state => state.imagesHistory
@@ -40,14 +32,6 @@ export default {
     deleteImageFromHistory(index) {
       this.DELETE_IMAGE_FROM_HISTORY(index);
     },
-
-    nextPage(){
-      this.pageNumber++;
-    },
-
-    prevPage(){
-      this.pageNumber--;
-    }
   }
 }
 </script>

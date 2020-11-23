@@ -128,6 +128,12 @@ export default {
       color: var(--color-white);
       outline: none;
 
+      &:active {
+        color: var(--color-blue);
+        background-color: var(--color-white);
+        border: 1px solid var(--color-blue);
+      }
+
       @include for-desktop {
         &:hover {
           color: var(--color-blue);

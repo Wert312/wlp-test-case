@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import PageMain from '@/views/PageMain.vue';
+import PageNotFound from '@/views/PageNotFound.vue';
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "PageHistory" */ '@/views/PageHistory.vue'),
     meta: {
       breadcrumb: 'История'
+    }
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: PageNotFound,
+    meta: {
+      breadcrumb: 'Ошибка 404'
     }
   }
 ];

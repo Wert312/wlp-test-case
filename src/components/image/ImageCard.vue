@@ -34,9 +34,16 @@
 
 <style lang="scss" scoped>
   .card {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    grid-column-gap: 20px;
     padding: 0 5px;
+
+    @include for-tablet {
+      grid-template-columns: 169px 1fr;
+      grid-column-gap: 27px;
+    }
+
     &:not(:last-of-type) {
       margin-bottom: 20px;
 
@@ -88,7 +95,7 @@
       font-size: 14px;
       height: 35px;
       width: 100%;
-      color: red;
+      color: var(--color-red);
       background-color: var(--color-white);
       font-weight: bold;
       border: none;
@@ -102,14 +109,14 @@
 
       @include for-desktop {
         &:hover {
-          background-color: red;
+          background-color: var(--color-red);
           color: var(--color-white);
           cursor: pointer;
         }
       }
 
       &:active {
-        background-color: red;
+        background-color: var(--color-red);
         color: var(--color-white);
       }
     }
