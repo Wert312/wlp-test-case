@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/wlp-test-case/',
   css: {
     loaderOptions: {
       sass: {
