@@ -84,10 +84,10 @@ export default {
     &__image-wrapper {
       width: 100%;
       height: 100%;
-      max-height: 200px;
+      height: 200px;
 
       @include for-tablet {
-        max-height: 252px;
+        height: 252px;
       }
     }
 
