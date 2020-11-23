@@ -100,7 +100,7 @@
       font-weight: bold;
       border: none;
       outline: none;
-      border: 1px solid red;
+      border: 1px solid var(--color-red);
       border-radius: 2px;
 
       @include for-tablet {
