@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/wlp-test-case/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/wlp-test-case/' : '/',
   css: {
     loaderOptions: {
       sass: {
